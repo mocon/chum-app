@@ -8,10 +8,7 @@
  * Controller of the chumApp
  */
 angular.module('chumApp')
-  .controller('ContactsCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ContactsCtrl', function (ContactsService) {
+    /* Retrieve list of all contacts from ContactsService */
+    this.userContacts = ContactsService.getContacts();
   });

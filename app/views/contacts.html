@@ -1,4 +1,7 @@
 <div class="main-view">
 	<h1>My Contacts</h1>
 	<p>My contacts go here.</p>
+	<ol>
+		<li ng-repeat="contact in contacts.userContacts">{{contact.name}} ({{contact.weight}})</li>
+	</ol>
 </div>
