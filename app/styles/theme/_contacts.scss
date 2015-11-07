@@ -1,0 +1,27 @@
+.contact-list {
+	list-style: none;
+	
+	li {
+		position: relative;
+		margin-bottom: 10px;
+		padding-left: 20px;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			top: 4px;
+			left: 0;
+			width: 12px;
+			height: 12px;
+			border-radius: 6px;
+			background: mix($pri-color-1, white, 10%);
+		}
+		
+		/* Color the circles according to weight */
+		@for $i from 1 through 10 {
+			&[data-weight='#{$i}']:before {
+				background: mix($pri-color-1, white, ($i * 10%));
+			}
+		}
+	}
+}
