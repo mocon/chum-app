@@ -34,6 +34,14 @@ h1, p {
 	  -o-transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
 	  transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
 	  position: absolute;
+	  
+	  @media #{$small}{
+			-webkit-transition: none;
+			-moz-transition: none;
+			-ms-transition: none;
+			-o-transition: none;
+			transition: none;
+	  }
 	} 
 	 
 	&.ng-enter {
@@ -54,5 +62,7 @@ h1, p {
 	
 	&.ng-leave-active, &.ng-enter-active{
 	  opacity: 0;
+	  
+	  @media #{$small}{opacity: 1;}
 	}
 }
