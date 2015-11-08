@@ -1,20 +1,25 @@
-.header {
+.header.chum {
 	.navbar {
-		color: white;
 		background-color: $acc-color-1;
 		border: none;
 		border-radius: 0;
 	}
 	
-	.navbar-brand, .navbar-nav > li > a {
-		color: white;
+	.navbar-brand {
+		img {width: 83px;}
 	}
 	
-	.navbar-nav > li > a:hover {color: $page-color;}
+	.navbar-default .navbar-nav > li > a {
+		color: white;
+		
+		&:hover {
+			color: $page-color;
+		}
+	}
 	
 	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-		color: $pri-color-3;
-		background: $page-color;
+		color: white;
+		background: mix($pri-color-3, $acc-color-1, 10%);
 	}
 	
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -28,14 +33,14 @@
 	
 	/* Hamburger menu */
 	.navbar-toggle {
+		color: white;
 		width: 36px;
 		height: 36px;
 		border-radius: 18px;
 		border: none;
 		@extend .transition;
 		
-		&:hover {background: $page-color;}
-		&:focus {background: transparent;}
+		&:hover, &:focus {background: mix($pri-color-3, $acc-color-1, 10%);}
 		
 		i {
 			position: absolute;
