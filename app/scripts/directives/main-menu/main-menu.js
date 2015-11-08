@@ -13,7 +13,7 @@ angular.module('chumApp')
 	    restrict: 'AE',
 	    scope: true,
 	    replace: false,
-	    templateUrl: 'scripts/directives/main-menu/main-menu.html',
+	    templateUrl: 'views/main-menu.html',
 	    link: function(scope, elem, attrs){
 		    scope.currentPath = $location.path();
 		    scope.$on('$locationChangeSuccess', function () {
