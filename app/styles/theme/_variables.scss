@@ -1,2 +1,37 @@
+/* Color palette (nod: https://color.adobe.com/Flat-UI-color-theme-2469224/) */
+$page-color: #ECF0F1;
 $text-color:	 #444;
+
 $pri-color-1: #3498DB;
+$pri-color-2: #2980B9;
+$pri-color-3: #2C3E50;
+
+$acc-color-1: #E74C3C;
+
+/* Fonts */
+$font-1: 'Open Sans', sans-serif;
+
+/* Breakpoints */
+$small: "(max-width:767px)";
+$medium: "(min-width:768px) and (max-width:991px)";
+$large: "(min-width:992px) and (max-width:1199px)";
+$x-large: "(min-width:1200px)";
+
+/* Mixins */
+@mixin rotate($degrees) {
+	-moz-transform: rotate($degrees);
+	-webkit-transform: rotate($degrees);
+	-o-transform: rotate($degrees);
+	-ms-transform: rotate($degrees);
+	transform: rotate($degrees);
+	-webkit-backface-visibility: hidden;
+}
+
+/* Extendable classes */
+.transition {
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}

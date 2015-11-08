@@ -3,17 +3,17 @@
 	
 	li {
 		position: relative;
-		margin-bottom: 10px;
-		padding-left: 20px;
+		margin-bottom: 20px;
+		padding-left: 30px;
 		
 		&:before {
 			content: '';
 			position: absolute;
-			top: 4px;
+			top: 3px;
 			left: 0;
-			width: 12px;
-			height: 12px;
-			border-radius: 6px;
+			width: 16px;
+			height: 16px;
+			border-radius: 8px;
 			background: mix($pri-color-1, white, 10%);
 		}
 		

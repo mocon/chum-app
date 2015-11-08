@@ -19,6 +19,9 @@ angular.module('chumApp')
 		    scope.$on('$locationChangeSuccess', function () {
 	        scope.currentPath = $location.path();
 		    });
+		    $(".navbar-nav li a").click(function(event) {
+			    $(".navbar-collapse").collapse('hide');
+			  });
 	    }
     };
   });

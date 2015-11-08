@@ -1,0 +1,48 @@
+.header {
+	.navbar {
+		color: white;
+		background-color: $acc-color-1;
+		border: none;
+		border-radius: 0;
+	}
+	
+	.navbar-brand, .navbar-nav > li > a {
+		color: white;
+	}
+	
+	.navbar-nav > li > a:hover {color: $page-color;}
+	
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+		color: $pri-color-3;
+		background: $page-color;
+	}
+	
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border: none;
+	}
+	
+	.navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	/* Hamburger menu */
+	.navbar-toggle {
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+		border: none;
+		@extend .transition;
+		
+		&:hover {background: $page-color;}
+		&:focus {background: transparent;}
+		
+		i {
+			position: absolute;
+			top: 9px;
+			left: 10px;
+			font-size: 18px;
+		}
+	}
+	
+}
