@@ -8,9 +8,9 @@
  * Controller of the chumApp
  */
 angular.module('chumApp')
-  .controller('ContactsCtrl', function (ContactsService) {
+  .controller('ChumsCtrl', function (ContactsService) {
     /* Retrieve list of all contacts from ContactsService */
-    this.userContacts = ContactsService.getContacts();
+    this.userChums = ContactsService.getChums();
     
-    this.total = this.userContacts.length;
+    this.total = this.userChums.length;
   });

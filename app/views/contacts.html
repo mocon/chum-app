@@ -1,6 +1,6 @@
 <div class="main-view">
-	<h1>My Contacts</h1>
+	<h1>My Contacts ({{contacts.total}})</h1>
 	<ol class="contact-list">
-		<li ng-repeat="contact in contacts.userContacts | orderBy: 'name':false" data-weight="{{contact.weight}}">{{contact.name}} ({{contact.weight}})</li>
+		<li ng-repeat="contact in contacts.userContacts | orderBy: 'name':false" data-weight="{{contact.weight}}">{{contact.name}} <small ng-if="contact.weight !== 0" class="gray">({{contact.weight}})</small></li>
 	</ol>
 </div>

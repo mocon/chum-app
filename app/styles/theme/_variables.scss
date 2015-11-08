@@ -1,12 +1,11 @@
 /* Color palette (nod: https://color.adobe.com/Flat-UI-color-theme-2469224/) */
 $page-color: #ECF0F1;
 $text-color:	 #444;
-
 $pri-color-1: #3498DB;
 $pri-color-2: #2980B9;
 $pri-color-3: #2C3E50;
-
 $acc-color-1: #E74C3C;
+$light-gray: #CCC;
 
 /* Fonts */
 $font-1: 'Open Sans', sans-serif;
@@ -34,4 +33,8 @@ $x-large: "(min-width:1200px)";
 	-ms-transition: all 300ms ease-in-out;
 	-o-transition: all 300ms ease-in-out;
 	transition: all 300ms ease-in-out;
+}
+
+.gray {
+	color: $light-gray;
 }
