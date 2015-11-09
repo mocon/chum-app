@@ -1,6 +1,16 @@
 <div class="main-view">
-	<h1>My Contacts ({{contacts.total}})</h1>
+	<h1><span class="hide-small">My </span>Contacts ({{contacts.total}})<input type="text" ng-model="search" placeholder="Filter contacts..."></h1>
 	<ol class="contact-list">
-		<li ng-repeat="contact in contacts.userContacts | orderBy: 'name':false" data-weight="{{contact.weight}}">{{contact.name}} <small ng-if="contact.weight !== 0" class="gray">({{contact.weight}})</small></li>
+		<li ng-repeat="contact in contacts.userContacts | orderBy: 'name':false | filter: search" data-weight="{{contact.weight}}">
+			{{contact.name}} <small ng-if="contact.weight !== 0" class="gray">({{contact.weight}})</small>
+			<div class="edit-weights pull-right">
+				<ul>
+					<li ng-repeat="rating in contacts.allRatings" ng-click="contacts.rateContact(contact._id, rating)" title="{{rating}}">
+						<i class="fa fa-circle"></i>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</li>
 	</ol>
 </div>

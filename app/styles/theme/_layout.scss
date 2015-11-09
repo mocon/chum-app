@@ -16,53 +16,32 @@ ul, ol {
 
 h1 {
 	margin-top: 5px;
+	
+	input {
+		float: right;
+    font-size: 16px;
+    padding: 8px 10px 2px;
+    border-radius: 3px;
+    border: 1px solid $page-color;
+		
+		&:focus {
+			outline: none;
+			border-color: $pri-color-1;
+		}
+		
+		&:after {
+			content: '';
+			clear: both;
+		}
+		
+		@media #{$small} {display: none;}
+	}
 }
 
 h1, p {
 	margin-bottom: 30px;
 }
 
-/* Angular-animate transitions */
-.ng-scope {
-	position: relative;
-	
-	&.ng-enter, &.ng-leave {
-	  /* Nod: http://matthewlein.com/ceaser/ */
-	  -webkit-transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
-	  -moz-transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
-	  -ms-transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
-	  -o-transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
-	  transition: 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000) all;
-	  position: absolute;
-	  
-	  @media #{$small}{
-			-webkit-transition: none;
-			-moz-transition: none;
-			-ms-transition: none;
-			-o-transition: none;
-			transition: none;
-	  }
-	} 
-	 
-	&.ng-enter {
-	  left: 100%;
-	}
-	
-	&.ng-enter.ng-enter-active {
-	  left: 0;
-	}
-	 
-	&.ng-leave {
-	  left: 0;
-	}
-	
-	&.ng-leave.ng-leave-active{
-	  left: -100%;
-	}
-	
-	&.ng-leave-active, &.ng-enter-active{
-	  opacity: 0;
-	  
-	  @media #{$small}{opacity: 1;}
-	}
+.hide-small {
+	@media #{$small} {display: none;}
 }

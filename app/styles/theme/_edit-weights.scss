@@ -1,0 +1,29 @@
+.edit-weights {
+	opacity: 0;
+	@extend .transition;
+	
+	@media #{$small} {display: none}
+	
+	ul {
+		list-style: none;
+		
+		li {
+			display: inline-block;
+			margin: 0;
+			padding: 2px 0 2px 8px;
+			cursor: pointer;
+			border: none;
+			
+			&:hover i {text-shadow: 0 0 2px $pri-color-1;}
+			
+			i {font-size: 20px;}
+			
+			/* Color the circles */
+			@for $i from 1 through 11 {
+				&:nth-child(#{$i}) i {
+					color: mix($pri-color-1, white, ($i * 9%));
+				}
+			}
+		}
+	}
+}

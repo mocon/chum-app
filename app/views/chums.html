@@ -1,6 +1,16 @@
 <div class="main-view">
-	<h1>My Chums ({{chums.total}})</h1>
+	<h1><span class="hide-small">My </span>Chums ({{chums.total}})<input type="text" ng-model="search" placeholder="Filter chums..."></h1>
 	<ol class="contact-list">
-		<li ng-repeat="chum in chums.userChums | orderBy: 'weight':true" data-weight="{{chum.weight}}">{{chum.name}} <small class="gray">({{chum.weight}})</small></li>
+		<li ng-repeat="chum in chums.userChums | orderBy: 'weight':true | filter: search" data-weight="{{chum.weight}}">
+			{{chum.name}} <small class="gray">({{chum.weight}})</small>
+			<div class="edit-weights pull-right">
+				<ul>
+					<li ng-repeat="rating in chums.allRatings" ng-click="chums.rateContact(chum._id, rating)" title="{{rating}}">
+						<i class="fa fa-circle"></i>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</li>
 	</ol>
 </div>
